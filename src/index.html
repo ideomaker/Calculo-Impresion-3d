@@ -1,0 +1,25 @@
+<body ng-app="bmrApp">
+  <div class="container">
+    <div class="jumbotron" ng-controller="headerCtrl">
+      <h1 class="main-header">{{header}}</h1>
+      <hr>
+      <br>
+      <form ng-controller="mainCtrl">
+        <h3>Tiempo de Impresión: 
+          (1 = una hora / 1.5 = 1:30)</h3><input ng-change="computeBMR()" ng-model="stats.tiempo"></input>
+        <br>
+        <br>
+        <h3>Peso en Gramos:</h3><input ng-change="computeBMR()" ng-model="stats.gramos"></input>
+        <br>
+        <br>
+        <b>Precio de Fabricación:</b>
+        <br>
+        <h3 class="result">{{stats.preciof}}</h3>
+        <br>
+        <b>Precio de Venta:</b>
+        <br>
+        <h3 class="result">{{stats.preciov}}</h3>
+      </form>
+      </div>
+    </div>
+</body>
